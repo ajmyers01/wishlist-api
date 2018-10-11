@@ -3,22 +3,21 @@ default: &default
   host: 127.0.0.1
   pool: 5
   timeout: 5000
-  username: root
-  password: imnPcNGDWWYB4q9CmaxLBCHn
+  username: mysql
+  password: mysql
 
 development:
   <<: *default
-  database: project-name-ruby-api_development
+  database: wishlist-api_development
 
 staging:
   <<: *default
-  database: project-name-ruby-api_staging
+  database: wishlist-api_staging
 
 test: &test
   <<: *default
-  database: project-name-ruby-api_test
+  database: wishlist-api_test
 
 production:
   <<: *default
-  database: project-name-ruby-api_production
-  password: root
+  database: wishlist-api_production
